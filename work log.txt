@@ -1,0 +1,22 @@
+4/26/2022
+------------------------------
+- Commented out everything related to databases. Focusing primarily on the basic function of the script.
+- Completed functions to get dictionary and image data from nasa API. Couldn't figure out why the image wasn't saving, realized save_image_file was nested in an if statement related to databases.
+- added 2 functions to calculate hash value and size of image in bytes.
+- Completed function to get dictionary of APOD at a specific date.
+- Couldn't figure out how to get hash value of image directly, getting error related to 'utf-8'. Opted to hash the url of the image. This isn't optimal as the url could potentially change one day but the hash value of the image should always be static.
+
+4/27/2022
+-----------------------------
+- Began work with database, imported sqlite3.
+- Completed create_db function with columns for identifiable information about the image.
+- Completed add_db function, inserts the identifiable information into the columns.
+- Completed image_in_db function which queries a column in the database. If a value already exists function returns true.
+
+4/28/2022
+---------------------------
+- Finished last function to set desktop background. 
+- Imported ctypes module.
+- Line of code to change desktop background was pulled from lab 9.
+- Added lines of output in 'print_apod_info' and 'image_in_db' functions to make the script output easily understood.
+- Tested program for functionality.
